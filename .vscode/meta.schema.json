@@ -1,0 +1,46 @@
+{
+  "$ref": "#/definitions/StyleMeta",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "StyleMeta": {
+      "additionalProperties": false,
+      "properties": {
+        "metadata": {
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "tags": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "name",
+            "description",
+            "tags"
+          ],
+          "type": "object"
+        },
+        "noteId": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "slug",
+        "noteId",
+        "metadata"
+      ],
+      "type": "object"
+    }
+  }
+}

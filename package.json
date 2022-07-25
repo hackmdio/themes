@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen:json-schema": "ts-json-schema-generator --path types/styleMeta.d.ts > .vscode/meta.schema.json"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/hackmdio/themes/issues"
   },
-  "homepage": "https://github.com/hackmdio/themes#readme"
+  "homepage": "https://github.com/hackmdio/themes#readme",
+  "devDependencies": {
+    "ts-json-schema-generator": "^1.0.0"
+  }
 }
