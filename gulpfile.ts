@@ -36,17 +36,5 @@ export async function listTheme() {
   return renderThemeTable();
 }
 
-export async function waitForNoteCreation() {
-  return new Promise((resolve) => {
-    setTimeout(resolve, 2000);
-  });
-}
-
-gulp.task(
-  "build",
-  series(checkConfig, buildStyles, waitForNoteCreation, listTheme)
-);
-gulp.task(
-  "dev",
-  series(checkConfig, buildStyles, waitForNoteCreation, listTheme, watchStyles)
-);
+gulp.task("build", series(checkConfig, buildStyles, listTheme));
+gulp.task("dev", series(checkConfig, buildStyles, listTheme, watchStyles));

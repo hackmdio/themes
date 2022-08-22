@@ -5,36 +5,12 @@
     "StyleMeta": {
       "additionalProperties": false,
       "properties": {
-        "metadata": {
-          "additionalProperties": false,
-          "properties": {
-            "description": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "tags": {
-              "items": {
-                "type": "string"
-              },
-              "type": "array"
-            }
-          },
-          "required": [
-            "name",
-            "description",
-            "tags"
-          ],
-          "type": "object"
-        },
         "slug": {
           "type": "string"
         }
       },
       "required": [
-        "slug",
-        "metadata"
+        "slug"
       ],
       "type": "object"
     }

@@ -19,7 +19,11 @@ export default function ({
     const meta = loadMetaFromCSS(filePath);
 
     const note = notesByPermalink[meta.slug];
-    const contentToUpdate = generateNoteContent(contents.toString(), meta);
+    const contentToUpdate = generateNoteContent(
+      contents.toString(),
+      meta,
+      teamPath
+    );
     if (note) {
       await api.updateTeamNote(teamPath, note.id, {
         content: contentToUpdate,

@@ -6,13 +6,17 @@ import path from "path";
 
 import { StyleMeta } from "../types/styleMeta";
 
-export function generateNoteContent(style: string, meta: StyleMeta) {
+export function generateNoteContent(
+  style: string,
+  meta: StyleMeta,
+  teamPath: string
+) {
   const {
     metadata: {
-      description = `${meta.slug} theme`,
-      name = meta.slug,
-      tags = ["theme"],
-    } = {},
+      description = `Use \`{%hackmd @${teamPath}/${meta.slug} %}\` syntax to include this theme.`,
+      name = `HackMD Theme - ${meta.metadata?.name}`,
+      tags = ["HackMD-Theme"],
+    } = meta.metadata || {},
   } = meta;
 
   return `---
