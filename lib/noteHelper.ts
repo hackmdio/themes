@@ -1,4 +1,8 @@
 import API from "@hackmd/api";
+
+import fs from "fs";
+import path from "path";
+
 import { StyleMeta } from "../types/styleMeta";
 
 export function generateNoteContent(style: string, meta: StyleMeta) {
@@ -32,4 +36,20 @@ export async function getNotesMapByPermalink(api: API, teamPath: string) {
     }),
     {}
   );
+}
+
+export function loadMetaFromCSS(filePath: string) {
+  const meta = JSON.parse(
+    fs.readFileSync(path.resolve(filePath, "../meta.json"), "utf8")
+  ) as StyleMeta;
+
+  if (!meta.slug || !meta.slug.length) {
+    throw new Error("Missing slug in metadata");
+  }
+
+  if (!meta.metadata) {
+    console.warn("Missing style metadata");
+  }
+
+  return meta;
 }
