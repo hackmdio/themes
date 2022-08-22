@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gen:json-schema": "ts-json-schema-generator --path types/styleMeta.d.ts > .vscode/meta.schema.json",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -22,16 +23,20 @@
   "devDependencies": {
     "@hackmd/api": "2.2.1",
     "@types/gulp": "^4.0.9",
+    "@types/gulp-postcss": "^8.0.2",
     "@types/gulp-sass": "^5.0.0",
     "@types/node": "^18.6.1",
     "@types/react": "^18.0.17",
     "@types/through2": "^2.0.36",
+    "autoprefixer": "^10.4.8",
     "dotenv": "^16.0.1",
     "fast-glob": "^3.2.11",
     "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
     "ink": "^3.2.0",
     "ink-table": "^3.0.0",
+    "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "sass": "^1.54.5",

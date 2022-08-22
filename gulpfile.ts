@@ -1,6 +1,7 @@
 import gulp, { src, series, watch } from "gulp";
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
+import postcss from "gulp-postcss";
 
 import hackmdConfig from "./hackmd.config";
 import { getNotesMapByPermalink } from "./lib/noteHelper";
@@ -15,6 +16,7 @@ export async function buildStyles() {
 
   return src("src/**/style.scss")
     .pipe(sass().on("error", sass.logError))
+    .pipe(postcss())
     .pipe(gulpPlugin({ api, notesByPermalink, teamPath: workspaceTeamPath }));
 }
 
