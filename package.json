@@ -30,6 +30,7 @@
     "@types/react": "^18.0.17",
     "@types/through2": "^2.0.36",
     "autoprefixer": "^10.4.8",
+    "cssnano": "^5.1.13",
     "dotenv": "^16.0.1",
     "fast-glob": "^3.2.11",
     "gulp": "^4.0.2",
