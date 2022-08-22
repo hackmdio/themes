@@ -1,10 +1,9 @@
 {
   "json.schemas": [
     {
-      "fileMatch": [
-        "/src/**/meta.json",
-      ],
+      "fileMatch": ["/src/**/meta.json"],
       "url": "/.vscode/meta.schema.json"
     }
   ],
+  "editor.formatOnSave": true
 }

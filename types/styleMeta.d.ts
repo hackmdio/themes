@@ -5,5 +5,5 @@ export type StyleMeta = {
     name: string;
     description: string;
     tags: string[];
-  }
-}
+  };
+};

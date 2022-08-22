@@ -21,11 +21,7 @@
               "type": "array"
             }
           },
-          "required": [
-            "name",
-            "description",
-            "tags"
-          ],
+          "required": ["name", "description", "tags"],
           "type": "object"
         },
         "noteId": {
@@ -35,11 +31,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "slug",
-        "noteId",
-        "metadata"
-      ],
+      "required": ["slug", "noteId", "metadata"],
       "type": "object"
     }
   }
