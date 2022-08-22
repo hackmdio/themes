@@ -23,6 +23,7 @@ export default function ({
     if (note) {
       await api.updateTeamNote(teamPath, note.id, {
         content: contentToUpdate,
+        permalink: meta.slug,
       });
     } else {
       await api.createTeamNote(teamPath, {

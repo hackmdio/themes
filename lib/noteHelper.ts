@@ -1,4 +1,5 @@
 import API from "@hackmd/api";
+import { Note } from "@hackmd/api/dist/type";
 
 import fs from "fs";
 import path from "path";
@@ -10,14 +11,14 @@ export function generateNoteContent(style: string, meta: StyleMeta) {
     metadata: {
       description = `${meta.slug} theme`,
       name = meta.slug,
-      tags = "theme",
+      tags = ["theme"],
     } = {},
   } = meta;
 
   return `---
 title: ${name}
 description: ${description}
-tags: ${tags}
+tags: ${tags.join(", ")}
 ---
 
 <style>
@@ -34,7 +35,7 @@ export async function getNotesMapByPermalink(api: API, teamPath: string) {
       ...acc,
       [note.permalink]: note,
     }),
-    {}
+    {} as Record<string, Note>
   );
 }
 

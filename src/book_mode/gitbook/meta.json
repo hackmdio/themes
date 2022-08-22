@@ -1,3 +1,8 @@
 {
-  "slug": "gitbook-book"
+  "slug": "gitbook-book",
+  "metadata": {
+    "name": "Gitbook Theme",
+    "description": "A gitbook like theme for HackMD Book mode",
+    "tags": ["books-theme"]
+  }
 }
