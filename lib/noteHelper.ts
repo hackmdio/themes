@@ -11,13 +11,13 @@ export function generateNoteContent(
   meta: StyleMeta,
   teamPath: string
 ) {
-  const {
-    metadata: {
-      description = `Use \`{%hackmd @${teamPath}/${meta.slug} %}\` syntax to include this theme.`,
-      name = `HackMD Theme - ${meta.metadata?.name}`,
-      tags = ["HackMD-Theme"],
-    } = meta.metadata || {},
-  } = meta;
+  const description = `Use \`{%hackmd @${teamPath}/${
+    meta.slug
+  } %}\` syntax to include this theme.${
+    meta.description ? `\n  ${meta.description}` : ""
+  }`;
+  const name = `HackMD Theme - ${meta.name}`;
+  const tags = ["HackMD-Theme"];
 
   return `---
 title: ${name}
@@ -52,8 +52,8 @@ export function loadMetaFromCSS(filePath: string) {
     throw new Error("Missing slug in metadata");
   }
 
-  if (!meta.metadata) {
-    console.warn("Missing style metadata");
+  if (!meta.name) {
+    throw new Error("Missing Theme name");
   }
 
   return meta;

@@ -5,12 +5,19 @@
     "StyleMeta": {
       "additionalProperties": false,
       "properties": {
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
         "slug": {
           "type": "string"
         }
       },
       "required": [
-        "slug"
+        "slug",
+        "name"
       ],
       "type": "object"
     }
