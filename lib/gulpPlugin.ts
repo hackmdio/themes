@@ -23,6 +23,7 @@ export default function ({
     if (note) {
       await api.updateTeamNote(teamPath, note.id, {
         content: contentToUpdate,
+        // !FIXME: workaround to prevent the API from clearing the permalink
         permalink: meta.slug,
       });
     } else {
