@@ -21,17 +21,21 @@
               "type": "array"
             }
           },
-          "required": ["name", "description", "tags"],
+          "required": [
+            "name",
+            "description",
+            "tags"
+          ],
           "type": "object"
-        },
-        "noteId": {
-          "type": "string"
         },
         "slug": {
           "type": "string"
         }
       },
-      "required": ["slug", "noteId", "metadata"],
+      "required": [
+        "slug",
+        "metadata"
+      ],
       "type": "object"
     }
   }
