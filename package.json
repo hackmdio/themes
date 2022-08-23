@@ -15,8 +15,12 @@
     "url": "git+https://github.com/hackmdio/themes.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "email": "support@hackmd.io",
+    "name": "HackMD Dev",
+    "url": "https://hackmd.io"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hackmdio/themes/issues"
   },
