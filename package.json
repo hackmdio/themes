@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "gen:json-schema": "ts-json-schema-generator --path types/styleMeta.d.ts > .vscode/meta.schema.json",
     "fmt": "prettier --write .",
+    "lint": "prettier --check .",
     "dev": "gulp dev",
     "build": "gulp build"
   },
