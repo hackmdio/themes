@@ -1,4 +1,4 @@
-name: Themes Build
+name: Themes Stage Build
 
 on:
   push:
