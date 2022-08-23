@@ -2,13 +2,13 @@ name: Themes Build
 
 on:
   push:
-    branches: ["main"]
+    branches: ["develop"]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: Production
+    environment: Staging
 
     steps:
       - uses: actions/checkout@v3
