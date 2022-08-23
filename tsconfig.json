@@ -3,6 +3,6 @@
     "jsx": "react",
     "moduleResolution": "NodeNext",
     "module": "CommonJS",
-    "esModuleInterop": true,
-  },
+    "esModuleInterop": true
+  }
 }

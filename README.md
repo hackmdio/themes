@@ -4,7 +4,7 @@
 
 <!-- THEME_START -->
 
-|       Theme        |               Preview               |             Syntax             |
+| Theme              | Preview                             | Syntax                         |
 | ------------------ | ----------------------------------- | ------------------------------ |
 | GitBook Book Theme | ![gitbook](docs/images/gitbook.png) | `{% hackmd @themes/gitbook %}` |
 
@@ -65,15 +65,15 @@ pnpm dev
 1. Create a folder with the name of your theme in `src` directory, and create `style.scss` in it. For example, if your theme name is `my-theme`, you should create `src/my-theme/style.scss`.
 2. Create a JSON file named `meta.json` in the same folder. The content of `meta.json` should be like this:
 
-    ```json
-    {
-      "slug": "my-theme",
-      "name": "My HackMD Theme"
-    }
-    ```
+   ```json
+   {
+     "slug": "my-theme",
+     "name": "My HackMD Theme"
+   }
+   ```
 
-    - `slug` is the permalink of your Theme
-    - `name` is the name of your theme
+   - `slug` is the permalink of your Theme
+   - `name` is the name of your theme
 
 3. The folder structure might look like this:
 
