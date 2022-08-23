@@ -15,10 +15,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "slug",
-        "name"
-      ],
+      "required": ["slug", "name"],
       "type": "object"
     }
   }
