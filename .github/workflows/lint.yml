@@ -3,10 +3,11 @@ name: Lint
 on:
   push:
     branches:
-      - '*'
-      - '!main'
-      - '!develop'
-
+      - "*"
+      - "!main"
+      - "!develop"
+  pull_request:
+    branches: ["*"]
   workflow_dispatch:
 
 jobs:
