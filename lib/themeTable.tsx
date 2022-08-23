@@ -33,6 +33,9 @@ export async function renderThemeTable() {
   const themes = entries
     .map((entry) => {
       const meta = loadMetaFromCSS(entry);
+
+      if (!meta) return null;
+
       return notesMap[meta.slug];
     })
     .filter(Boolean)

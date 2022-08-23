@@ -18,6 +18,10 @@ export default function ({
 
     const meta = loadMetaFromCSS(filePath);
 
+    if (!meta) {
+      return cb(null, file);
+    }
+
     const note = notesByPermalink[meta.slug];
     const contentToUpdate = generateNoteContent(
       contents.toString(),

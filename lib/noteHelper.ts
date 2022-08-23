@@ -44,9 +44,13 @@ export async function getNotesMapByPermalink(api: API, teamPath: string) {
 }
 
 export function loadMetaFromCSS(filePath: string) {
-  const meta = JSON.parse(
-    fs.readFileSync(path.resolve(filePath, "../meta.json"), "utf8")
-  ) as StyleMeta;
+  const metaFilePath = path.resolve(filePath, "../meta.json");
+
+  if (!fs.existsSync(metaFilePath)) {
+    return null;
+  }
+
+  const meta = JSON.parse(fs.readFileSync(metaFilePath, "utf8")) as StyleMeta;
 
   if (!meta.slug || !meta.slug.length) {
     throw new Error("Missing slug in metadata");
