@@ -1,14 +1,18 @@
-name: Themes Stage Build
+name: Lint
 
 on:
   push:
-    branches: ["develop"]
+    branches:
+      - "*"
+      - "!main"
+      - "!develop"
+  pull_request:
+    branches: ["*"]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: Staging
 
     steps:
       - uses: actions/checkout@v3
@@ -41,7 +45,3 @@ jobs:
         run: pnpm install
 
       - run: pnpm lint
-      - run: pnpm run build --if-present
-        env:
-          HACKMD_ACCESS_TOKEN: ${{ secrets.HACKMD_ACCESS_TOKEN }}
-          HACKMD_WORKSPACE_TEAM_PATH: ${{ secrets.HACKMD_WORKSPACE_TEAM_PATH }}

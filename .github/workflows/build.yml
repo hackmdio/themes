@@ -1,4 +1,4 @@
-name: Themes Build
+name: Themes Production Build
 
 on:
   push:
