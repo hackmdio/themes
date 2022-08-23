@@ -21,7 +21,7 @@ export async function buildStyles() {
 }
 
 export async function watchStyles() {
-  return watch("src/**/style.scss", buildStyles);
+  return watch("src/**/style.scss", series(buildStyles, listTheme));
 }
 
 export async function checkConfig() {
