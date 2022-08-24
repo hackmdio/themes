@@ -1,10 +1,10 @@
 # HackMD Themes
 
-## Available Themes
+## Themes
 
 <!-- THEME_START -->
 
-| Theme              | Preview                             | Syntax                         |
+| Theme              | Preview                             | Embed Snippet                  |
 | ------------------ | ----------------------------------- | ------------------------------ |
 | GitBook Book Theme | ![gitbook](docs/images/gitbook.png) | `{% hackmd @themes/gitbook %}` |
 
