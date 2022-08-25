@@ -100,7 +100,6 @@ pnpm dev
 
    - Use the `syntax` to include your theme in HackMD notes and test it.
 
-
 ## Thanks
 
 - Workflow from [@Hsins](https://github.com/@Hsins)'s [hackmd-themes](https://github.com/Hsins/hackmd-themes) for inspiring this project.
