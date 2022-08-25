@@ -14,6 +14,8 @@
 
 ## Getting Started with HackMD Themes Development
 
+https://user-images.githubusercontent.com/4230968/186604892-f430af0a-c494-43c3-9e87-3ca1a9a901df.mp4
+
 ### Prerequisites
 
 - [Register for a HackMD account](https://hackmd.io) and create an API token on [the settings page](https://hackmd.io/settings#api)
@@ -97,6 +99,7 @@ pnpm dev
    ```
 
    - Use the `syntax` to include your theme in HackMD notes and test it.
+
 
 ## Thanks
 
